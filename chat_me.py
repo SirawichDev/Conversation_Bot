@@ -48,3 +48,36 @@ for conversation in conver_id_split:
         #break
     #break
 #endofPredata
+
+def clean_process(word):
+    word = word.lower()
+    #replace word
+    word = re.sub(r"i'm","i am",word)
+    word = re.sub(r"he's","he is",word)
+    word = re.sub(r"she's","she is",word)
+    word = re.sub(r"that's","that is",word)
+    word = re.sub(r"what's","what is",word)
+    word = re.sub(r"where's","where is",word)
+    word = re.sub(r"\'ll"," will", word)
+    word = re.sub(r"\'ve"," have", word)
+    word = re.sub(r"\'d"," would", word)
+    word = re.sub(r"\'re"," are", word)
+    word = re.sub(r"won't","will not", word)
+    word = re.sub(r"can't","cannot", word)
+    word = re.sub(r"won't","will not", word)
+    #remove unnessecary symbol
+    word = re.sub(r"[-()\"#/@;:<>{}+-=[.?,]]", "", word)
+    return word
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
