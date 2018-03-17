@@ -49,7 +49,17 @@ for conversation in conver_id_split:
     #break
 #endofPredata
 
-def clean_process(text):
+def clean_process(word):
+    word = word.lower()
+    #replace word
+    word = re.sub(r"i'm","i am",word)
+    word = re.sub(r"he's","he is",word)
+    word = re.sub(r"she's","she is",word)
+    word = re.sub(r"that's","that is",word)
+    word = re.sub(r"what's","what is",word)
+    word = re.sub(r"where's","where is",word)
+    
+    return word
     
     
     
