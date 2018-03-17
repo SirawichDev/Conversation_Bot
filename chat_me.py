@@ -22,5 +22,13 @@ map_text_id = {}
 for line in lines:
     _line = line.split(' +++$+++ ')#_lineใช้เฉพาะใน loop
     if len(_line) == 5:
-        map_text_id[_line[0]] = _line[4] #map id กับ text
+        map_text_id[_line[0]] = _line[4]#map id กับ text
+      #  print(_line[4])
+      # print(map_text_id[_line[0]])
+      # break
         
+conver_split= ()
+for convers in conver:
+    _convers = convers.split(' +++$+++ ')[-1][1:-1].replace("'","").replace(" ","")
+    #print(_convers)
+    #break
