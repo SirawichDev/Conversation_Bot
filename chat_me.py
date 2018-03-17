@@ -61,7 +61,10 @@ def clean_process(word):
     word = re.sub(r"\'ll"," will", word)
     word = re.sub(r"\'ve"," have", word)
     word = re.sub(r"\'d"," would", word)
-
+    word = re.sub(r"\'re"," are", word)
+    word = re.sub(r"won't","will not", word)
+    word = re.sub(r"can't","cannot", word)
+  
     return word
     
     
