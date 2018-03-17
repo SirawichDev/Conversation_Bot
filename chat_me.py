@@ -27,8 +27,11 @@ for line in lines:
       # print(map_text_id[_line[0]])
       # break
         
-conver_split= ()
-for convers in conver:
-    _convers = convers.split(' +++$+++ ')[-1][1:-1].replace("'","").replace(" ","")
+conver_split= []
+for convers in conver[:-1]:
+    _convers = convers.split(' +++$+++ ')[-1][1:-1].replace("'","").replace(" ","")#เลือกindexสุดดท้ายแล้วตัด[]ออก
     #print(_convers)
+    #break
+    conver_split.append(_convers.split(','))
+    #print(conver_split[0])
     #break
