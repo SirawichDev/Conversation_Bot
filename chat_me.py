@@ -18,9 +18,9 @@ conver = open('movie_conversations.txt', encoding='utf-8', errors='ignore').read
 
 #map id กับ line
 
-map_line_id = {}
+map_text_id = {}
 for line in lines:
     _line = line.split(' +++$+++ ')#_lineใช้เฉพาะใน loop
     if len(_line) == 5:
-        map_line_id[_line[0]] = _line[4] #map id กับ text
+        map_text_id[_line[0]] = _line[4] #map id กับ text
         
