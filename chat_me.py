@@ -64,7 +64,9 @@ def clean_process(word):
     word = re.sub(r"\'re"," are", word)
     word = re.sub(r"won't","will not", word)
     word = re.sub(r"can't","cannot", word)
-  
+    word = re.sub(r"won't","will not", word)
+    #remove unnessecary symbol
+    word = re.sub(r"[-()\"#/@;:<>{}+-=[.?,]]", "", word)
     return word
     
     
