@@ -16,7 +16,7 @@ import time
 lines = open('movie_lines.txt', encoding = 'utf-8', errors= 'ignore').read().split('\n')
 conver = open('movie_conversations.txt', encoding='utf-8', errors='ignore').read().split('\n')
 
-#map id กับ line
+#map id กับ conversation
 
 map_text_id = {}
 for line in lines:
@@ -27,11 +27,20 @@ for line in lines:
       # print(map_text_id[_line[0]])
       # break
         
-conver_split= []
+conver_id_split= []
 for convers in conver[:-1]:
     _convers = convers.split(' +++$+++ ')[-1][1:-1].replace("'","").replace(" ","")#เลือกindexสุดดท้ายแล้วตัด[]ออก
     #print(_convers)
     #break
-    conver_split.append(_convers.split(','))
+    conver_id_split.append(_convers.split(','))
     #print(conver_split[0])
     #break
+
+#Q & A
+answer = []
+questions = []
+for conversation in conver_id_split:
+    for i in range(len(conversation)-1):
+        questions.append(map_text_id[conversation[i]])
+        answer.append(map_text_id[conversation[i+1]])
+        
