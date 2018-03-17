@@ -58,7 +58,10 @@ def clean_process(word):
     word = re.sub(r"that's","that is",word)
     word = re.sub(r"what's","what is",word)
     word = re.sub(r"where's","where is",word)
-    
+    word = re.sub(r"\'ll"," will", word)
+    word = re.sub(r"\'ve"," have", word)
+    word = re.sub(r"\'d"," would", word)
+
     return word
     
     
