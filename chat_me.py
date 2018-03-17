@@ -69,7 +69,20 @@ def clean_process(word):
     word = re.sub(r"[-()\"#/@;:<>{}+-=[.?,]]", "", word)
     return word
     
+#clean question
+clean_question = []
+for question in questions:
+    clean_question.append(clean_process(question))
+
+
+#clean answer
+clean_answer = []
+for answers in answer:
+    clean_answer.append(clean_process(answers))
+
     
+    
+
     
     
     
