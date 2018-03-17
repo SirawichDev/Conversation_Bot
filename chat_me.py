@@ -43,4 +43,8 @@ for conversation in conver_id_split:
     for i in range(len(conversation)-1):
         questions.append(map_text_id[conversation[i]])
         answer.append(map_text_id[conversation[i+1]])
-        
+        #print(questions[0]+'\n')
+        #print(answer[0])
+        #break
+    #break
+#endofPredata
