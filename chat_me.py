@@ -36,7 +36,7 @@ for convers in conver[:-1]:
     #print(conver_split[0])
     #break
 
-#Q & A
+#Qe & A
 answer = []
 questions = []
 for conversation in conver_id_split:
