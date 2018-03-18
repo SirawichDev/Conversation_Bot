@@ -107,7 +107,14 @@ for word, count in word_count.items():
     if count >= threshold:
         question_to_int[word] = count_word
         count_word +=1
+        
+answer_to_int = {}
+count_word = 0
 
+for word, count in word_count.items():
+    if count >= threshold:
+        answer_to_int[word] = count_word
+        count_word +=1
             
             
             
