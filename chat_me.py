@@ -115,9 +115,21 @@ for word, count in word_count.items():
     if count >= threshold:
         answer_to_int[word] = count_word
         count_word +=1
+        
+        
+#เพิ่มtoken ด้านหลัง dictonary
+tokens = ['<PAD>','<EOS>','<OUT>','<SOS>']
+for token in tokens:
+    question_to_int[token] = len(question_to_int) + 1
+for token in tokens:
+    answer_to_int[token] = len(question_to_int) + 1
+
+#ส้ราง dic แบบ invert ใน anser dic
+
+answer_to_word = {w_i: w for w, w_i in question_to_int.items()}       
+        
             
-            
-            
+
             
             
             
