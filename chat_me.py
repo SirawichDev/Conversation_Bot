@@ -115,6 +115,10 @@ for word, count in word_count.items():
     if count >= threshold:
         answer_to_int[word] = count_word
         count_word +=1
+        
+        
+#เพิ่มtoken ด้านหลัง dictonary
+        
             
             
             
