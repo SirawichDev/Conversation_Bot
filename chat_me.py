@@ -119,11 +119,12 @@ for word, count in word_count.items():
         
 #เพิ่มtoken ด้านหลัง dictonary
 tokens = ['<PAD>','<EOS>','<OUT>','<SOS>']
-
+for token in tokens:
+    question_to_int[token] = len(question_to_int) + 1
+    
         
             
-            
-            
+
             
             
             
