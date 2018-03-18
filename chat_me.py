@@ -89,6 +89,14 @@ for question in clean_question:
             word_count[word] = 1
         else:
             word_count[word] += 1
+            
+for answer in clean_answer:
+    for word in answer.split():
+        if word not in word_count:
+            word_count[word] = 1
+        else:
+            word_count[word] += 1
+
 
 
             
