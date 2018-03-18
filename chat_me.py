@@ -81,8 +81,39 @@ for answers in answer:
     clean_answer.append(clean_process(answers))
 
     
-    
+#สร้าง dictionary เพื่อให้ wordที่เหมือนกันนั้นเป็นตัวเลขขึ้นมา
+word_count ={}
+for question in clean_question:
+    for word in question.split():
+        if word not in word_count:
+            word_count[word] = 1
+        else:
+            word_count[word] += 1
 
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
     
     
     
