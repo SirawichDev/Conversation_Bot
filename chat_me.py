@@ -49,25 +49,25 @@ for conversation in conver_id_split:
     #break
 #endofPredata
 
-def clean_process(word):
-    word = word.lower()
+def clean_process(text):
+    text = text.lower()
     #replace word
-    word = re.sub(r"i'm","i am",word)
-    word = re.sub(r"he's","he is",word)
-    word = re.sub(r"she's","she is",word)
-    word = re.sub(r"that's","that is",word)
-    word = re.sub(r"what's","what is",word)
-    word = re.sub(r"where's","where is",word)
-    word = re.sub(r"\'ll"," will", word)
-    word = re.sub(r"\'ve"," have", word)
-    word = re.sub(r"\'d"," would", word)
-    word = re.sub(r"\'re"," are", word)
-    word = re.sub(r"won't","will not", word)
-    word = re.sub(r"can't","cannot", word)
-    word = re.sub(r"won't","will not", word)
-    #remove unnessecary symbol
-    word = re.sub(r"[-()\"#/@;:<>{}+-=[.?,]]", "", word)
-    return word
+    text = re.sub(r"i'm","i am",text)
+    text = re.sub(r"he's","he is",text)
+    text = re.sub(r"she's","she is",text)
+    text = re.sub(r"that's","that is",text)
+    text = re.sub(r"what's","what is",text)
+    text = re.sub(r"where's","where is",text)
+    text = re.sub(r"\'ll"," will", text)
+    text = re.sub(r"\'ve"," have", text)
+    text = re.sub(r"\'d"," would", text)
+    text = re.sub(r"\'re"," are", text)
+    text = re.sub(r"won't","will not", text)
+    text = re.sub(r"can't","cannot", text)
+    text = re.sub(r"won't","will not", text)
+    #text unnessecary symbol
+    text = re.sub(r"[-()\"#/@;:<>{}+-=|.?,]", "", text)
+    return text
     
 #clean question
 clean_question = []
@@ -97,8 +97,18 @@ for answer in clean_answer:
         else:
             word_count[word] += 1
 
+#สร้าง 2 dictionary  ที่ map กันระหว่าง question กบั  answer
 
+threshold = 20
+question_to_int = {}
+count_word = 0
 
+for word, count in word_count.items():
+    if count >= threshold:
+        question_to_int[word] = count_word
+        count_word +=1
+
+            
             
             
             
