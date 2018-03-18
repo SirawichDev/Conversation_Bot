@@ -121,7 +121,9 @@ for word, count in word_count.items():
 tokens = ['<PAD>','<EOS>','<OUT>','<SOS>']
 for token in tokens:
     question_to_int[token] = len(question_to_int) + 1
-    
+for token in tokens:
+    answer_to_int[token] = len(question_to_int) + 1
+       
         
             
 
