@@ -98,7 +98,7 @@ for answer in clean_answer:
             word_count[word] += 1
 
 #สร้าง 2 dictionary  ที่ map กันระหว่าง question กบั  answer
-
+#นับความถี่
 threshold = 20
 question_to_int = {}
 count_word = 0
@@ -125,10 +125,15 @@ for token in tokens:
     answer_to_int[token] = len(question_to_int) + 1
 
 #ส้ราง dic แบบ invert ใน anser dic
+#answer_to_int.items()
+#สลับให้ word มาอยู่ด้านหลัง integer
+answer_to_word = {w_i: w for w, w_i in answer_to_int.items()}       
 
-answer_to_word = {w_i: w for w, w_i in question_to_int.items()}       
-        
-            
+#เพิ่ม เพื่อให้รู้ว่าตรงใหนเป็นจุด จบของ คำตอบแต่ละอัน
+
+for i in range(len(clean_answer)):
+    clean_answer[i] += ' <EOF>'
+
 
             
             
