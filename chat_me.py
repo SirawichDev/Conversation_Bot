@@ -128,8 +128,12 @@ for token in tokens:
 #answer_to_int.items()
 #สลับให้ word มาอยู่ด้านหลัง integer
 answer_to_word = {w_i: w for w, w_i in answer_to_int.items()}       
-        
-            
+
+#เพิ่ม เพื่อให้รู้ว่าตรงใหนเป็นจุด จบของ คำตอบแต่ละอัน
+
+for i in range(len(clean_answer)):
+    clean_answer[i] += ' <EOF>'
+
 
             
             
